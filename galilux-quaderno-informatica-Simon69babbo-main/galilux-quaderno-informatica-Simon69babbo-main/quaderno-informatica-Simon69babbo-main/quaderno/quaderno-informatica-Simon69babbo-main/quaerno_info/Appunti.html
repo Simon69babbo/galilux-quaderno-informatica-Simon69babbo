@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Appunti</title>
+	</head>
+
+<body>
+	
+	<h1>MODELLO E/R</h1>
+	
+	<p> IL MODELLO E/R  e' un modello concettuale utilizzato per la progettazione di basi di dati. Le sue caratteristiche essenziali sono:<br>
+
+<br>ENTITA' : Rappresentano gli oggetti o concetti reali o astratti che hanno una certa rilevanza per il sistema. Ogni entita' e' caratterizzata da un insieme di attributi che ne definiscono le proprieta'. Ad esempio, in un database di una biblioteca, un'entita' potrebbe essere "Libro", e gli attributi potrebbero essere "Titolo", "Autore", "Anno di pubblicazione", ecc.<br>
+
+<br>RELAZIONI : Definiscono come le entita' interagiscono o sono collegate tra di loro. Una relazione puo coinvolgere una o piu' entita'. Ad esempio, la relazione "Prestito" tra l'entita' "Utente" e l'entita' "Libro" in una biblioteca.<br>	
+
+<br>CARDINIALITA': La cardinalita' di una relazione indica quante entita' di un tipo possono essere associate ad entita' di un altro tipo. Le cardinalita' piu' comuni sono:<br>
+
+Uno a uno (1:1): Ogni istanza di una entita' e' associata a una sola istanza di un'altra entita'.<br>
+
+Uno a molti (1:N): Un'istanza di una entita' e' associata a molte istanze di un'altra entita'.<br>	
+Molti a molti (N:M): Molte istanze di una entita' possono essere associate a molte istanze di un'altra entita'.<br>
+
+<br>CHIAVE PRIMARIA: Ogni entita' e' identificata in modo univoco tramite un attributo o un insieme di attributi che fungono da chiave primaria. Questo e' fondamentale per garantire l'integrita' e l'individualita' dei dati.</p>
+	
+<hr>
+
+
+  <h1>  DATABASE </h1>
+  
+  <p>  Il comando CREATE TABLE in SQL viene utilizzato per creare una nuova tabella in un database. Quando esegui questo comando, definisci la struttura della tabella, comprese le colonne (campi) e i tipi di dati che ogni colonna puo' contenere.<br>
+
+<br>CREAZIONE DEL CODICE (CREATE TABLE) IN SQL<br>
+
+<br>CREATE TABLE nome_tabella (<br>
+    nome_colonna1 tipo_dato1 [VINCOLO1],<br>
+    nome_colonna2 tipo_dato2 [VINCOLO2],<br>
+    ...<br>
+    nome_colonnaN tipo_datoN [VINCOLON]<br>
+);<br>
+
+<br>SPIEGAZIONE DEI COMPONENTI:<br>
+<br>nome_tabella: e' il nome che vuoi assegnare alla nuova tabella.<br>
+
+<br>nome_colonnaX: e' il nome di ciascuna colonna della tabella.<br>
+
+<br>tipo_datoX: e' il tipo di dato che la colonna puo' contenere: (ad esempio, INT, VARCHAR, ecc.).<br>
+  
+<br>VINCOLO (opzionale): e' un vincolo che definisce regole aggiuntive per le colonne come: NOT NULL, PRIMARY KEY, UNIQUE, DEFAULT, FOREIGN KEY, ecc.
+
+
+<hr>
+
+
+<h2>Query</h2>
+
+<p>Una query e' una richiesta di informazioni a un database. In altre parole, e' un comando che viene inviato al sistema di gestione del database (come MySQL, SQLite, PostgreSQL, ecc.) per ottenere, inserire, aggiornare o eliminare dati.
+
+Ad esempio: una query di 
+selezione (SELECT) viene utilizzata per ottenere dei dati specifici da una o più tabelle del database. 
+Una query può anche essere usata per manipolare i dati, come inserire nuove righe (INSERT), aggiornare dati esistenti (UPDATE)
+ o eliminare righe (DELETE).
+
+Esempio di una query di selezione:
+
+sql
+
+SELECT Nome, Cognome FROM Cliente WHERE Codice_Cliente = 1;
+Questa query restituisce il Nome e il Cognome di un cliente con Codice_Cliente uguale a 1.
+
+Le query sono fondamentali per interagire con il database e ottenere i risultati desiderati.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+ </html>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </p>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<form action="index.html">
+		<button>Indietro</button>
+	</form>
+	
+</body>
+
+
+
+</html>

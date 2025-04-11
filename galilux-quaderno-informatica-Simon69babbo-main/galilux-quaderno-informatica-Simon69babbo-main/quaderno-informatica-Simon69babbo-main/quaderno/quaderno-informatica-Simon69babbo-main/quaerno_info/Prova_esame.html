@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+
+	<h2>    Traccia Esame   </h2> 
+	
+	<p>un negozio noleggio film in videocassette VHS.
+	Il negozio dispone di un codice VHS: nel catalogo sono inoltre specificati il titolo del film, il regista, gli attori principali, la loro nazionalita',
+    ed il personaggio interpretato nel film, l'anno di produzione; ciascun film e indicizzato da un insieme di insieme di termini.<br>
+    I film possono essere anche la lingua originale; in tal caso nel catalogo e' detto di che lingua si tratta, e se il film e' sottotitolato.<br>
+   <br> Di ogni film presente nel catalogo il negozio dispone di una o piu' videocassette, ciascuna identificata dalla sua collocazione;
+    I clienti sono identificati da un codice; di essi interessa inoltre cognome,nome,indirizzo,telefono.</p>
+	
+	<h2>Una piccola soluzione che ho proposto </h2>
+	
+	
+	<p>
+	<h2>Entita':</h2>
+Film: rappresenta i film presenti nel catalogo del negozio.<br>
+
+Attributi: Codice VHS, Titolo, Regista, Anno di Produzione, Lingua Originale, Sottotitolato, Indici (insieme di termini), Lingua dei sottotitoli.<br>
+<br>
+Attore: rappresenta un attore che ha recitato nei film.<br>
+
+Attributi: Nome, Cognome, Nazionalita', Personaggio Interpretato.<br><br>
+
+Cliente: rappresenta un cliente che noleggia un film.<br>
+
+Attributi: Codice Cliente, Cognome, Nome, Indirizzo, Telefono.<br><br>
+
+Videocassetta: rappresenta una videocassetta che contiene una copia di un film.<br>
+
+Attributi: Codice VHS, Collocazione.<br><br>
+
+
+
+<h2>Relazioni:</h2>
+"Recita": Una relazione tra Film e Attore, poiche' ogni film ha attori che recitano nel film e ogni attore puo' recitare in piu' film,<br>
+
+Entita' coinvolte: Film,Attore<br>
+
+Cardinalita': Molti a molti (un attore puo' recitare in piu' film e un film ha piu' attori).<br><br>
+
+"Noleggia": Una relazione tra Cliente e Film. Ogni cliente puo' noleggiare uno o piu' film, e ogni film puo' essere noleggiato da piu' clienti,<br>
+
+Entita' coinvolte: Cliente, Film<br>
+
+Cardinalita': Molti a molti.<br><br>
+
+"Contiene": Una relazione tra Film e Videocassetta, poiche' ogni film e' rappresentato da una o piu'	videocassette.<br>
+
+Entita': coinvolte: Film, Videocassetta<br>
+
+Cardinalita': Uno a molti (un film puo' essere contenuto in piu' videocassette).<br><br>
+
+
+
+
+
+<h2>Schema logico</h2>
+Il modello logico si riflette in tabelle di un database relazionale, con le chiavi primarie (PK) e le chiavi esterne (FK). Ecco come potrebbero essere strutturate le tabelle:<br>
+
+
+<br>Film-/-
+
+Codice_VHS (PK)-/-
+
+Titolo-/-
+
+Regista-/-
+
+Anno_Produzione-/-
+
+Lingua_Originale-/-
+
+Sottotitolato-/-
+
+Lingua_Sottotitoli.<br><br>
+
+Attore-/-
+
+Codice_Attore (PK)-/-
+
+Nome-/-
+
+Cognome-/-
+
+Nazionalità-/-
+
+Personaggio_Interpretato.<br><br>
+
+Cliente-/-
+
+Codice_Cliente (PK)-/-
+
+Cognome-/-
+
+Nome-/-
+
+Indirizzo-/-
+
+Telefono.<br><br>
+
+Videocassetta
+
+Codice_VHS (PK, FK da Film)
+
+Collocazione
+
+Film_Attore (Relazione molti a molti tra Film e Attore)
+
+Codice_VHS (FK da Film)
+
+Codice_Attore (FK da Attore)
+
+Cliente_Film (Relazione molti a molti tra Cliente e Film per il noleggio)
+
+Codice_Cliente (FK da Cliente)
+
+Codice_VHS (FK da Film)
+
+Data_Noleggio</p>
+
+<h2> Ecco a te una delle 4 parti del codice per creare una tebella,<br>
+        ma stai tranquillo il procedimento e' sempre lo stesso</h2>	
+	
+	<p>CREATE TABLE IF NOT EXISTS Videocassetta (<br>
+    Codice_VHS INT PRIMARY KEY,<br>
+    Collocazione VARCHAR (76),<br>
+    FOREIGN KEY(Codice_VHS) REFERENCES Film(Codice_VHS)<br></p>
+	
+	<p>mi raccomando stai attento la FOREGIN KEY la usi solo quando delle entita' comunicano fra loro(anche se per esempio abiiamo una relazione molti a molti)  </p> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<form action="index.html">
+	<button type="submit">Menu Principale</button>
+	</form>
+	
+	
+	
+</body>
+</html>
